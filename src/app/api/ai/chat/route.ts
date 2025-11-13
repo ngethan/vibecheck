@@ -171,7 +171,7 @@ The user can then accept or reject your suggested changes in the UI.`
     console.log("[API] Converting messages for model...");
 
     const result = streamText({
-      model: openrouter.chat("anthropic/claude-3.5-sonnet"),
+      model: openrouter.chat("anthropic/claude-sonnet-4.5"),
       system: systemPrompt,
       messages: convertToModelMessages(messages),
       tools,

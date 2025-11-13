@@ -70,16 +70,16 @@ export default function SignUpPage() {
         {
           onSuccess: () => {
             toast.success(
-              "Account created successfully! Please check your email for verification.",
+              "Account created successfully! Please check your email for verification."
             );
             router.push(
-              "/auth/login?success=Please verify your email to continue",
+              "/auth/login?success=Please verify your email to continue"
             );
           },
           onError: (ctx) => {
             toast.error(ctx.error.message ?? "Sign up failed");
           },
-        },
+        }
       );
     } catch (err) {
       console.error("Signup error:", err);
@@ -97,14 +97,6 @@ export default function SignUpPage() {
         animation={{ scale: 50, speed: 50 }}
         noise={{ opacity: 0.3, scale: 1 }}
       />
-
-      <Link
-        href="/"
-        className="absolute top-8 left-8 z-10 flex items-center gap-2 text-muted-foreground text-sm transition-colors hover:text-foreground"
-      >
-        <ArrowLeft className="h-4 w-4" />
-        Home
-      </Link>
 
       <div className="relative z-10 w-full max-w-md space-y-6">
         <div className="space-y-4 text-center">
